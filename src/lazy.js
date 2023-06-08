@@ -6,11 +6,13 @@ const isIntersecting = (entry) => {
 
 // Desregistrar o dejar de escuchar una imagen que ya se ha cargado
 const accion = (entry) => {
-  const nodo = entry.target; //Div padre de la imagen
-  console.log('Soy visible');
+  const divContainerImg = entry.target; //Div padre de la imagen
+  const image = divContainerImg.firstChild; //Obtener la imagen
+  const url = image.dataset.src; //Obtener la url del dataset
+  image.src = url; //Cargar la imagen
 
   // Cargar imagen una única vez. "Desregisrar" la imagen (unlisten)
-  observer.unobserve(nodo);
+  observer.unobserve(divContainerImg);
 }
 
 // Añadir imagen como intersectada o "ya fue visualizada en la pantalla"

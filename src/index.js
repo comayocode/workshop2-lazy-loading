@@ -15,7 +15,7 @@ const createImageNode = () => {
   const imagen = document.createElement('img');
   imagen.className = "imagen mx-auto";
   imagen.width = "320";
-  imagen.src = `${urlBase}${randomImg()}.jpg`;
+  imagen.dataset.src = `${urlBase}${randomImg()}.jpg`;
 
   const divImg = document.createElement('div');
   divImg.className = "p-3";
