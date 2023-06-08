@@ -2,6 +2,11 @@
 @import 'tailwindcss/dist/components.css';
 @import 'tailwindcss/dist/utilities.css';
 
+html {
+  min-height: 100%;
+  position: relative;
+}
+
 #buttons {
   display: flex;
   flex-direction: column;
@@ -20,4 +25,41 @@
 
 .btn:hover {
   background-color: rgb(149, 75, 219);
+}
+
+#container-images {
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+
+.imagen {
+  background-color: rgb(196, 196, 196);
+  border-radius: 6px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: rgb(136, 69, 199);
+  ;
+  color: #fff;
+  /* Footer permanezca abajo de la página */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+footer>p {
+  padding: 0 20px;
+}
+
+.link-linkedin {
+  color: #000000;
+}
+
+.link-linkedin:hover {
+  color: #1f1530;
 }
