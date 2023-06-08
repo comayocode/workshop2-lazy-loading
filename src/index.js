@@ -1,3 +1,5 @@
+import {registerImage} from './lazy'
+
 const urlBase = "https://randomfox.ca/images/";
 const btnAdd = document.querySelector('.add');
 const btnClear = document.querySelector('.clean');
@@ -28,6 +30,7 @@ const addImageNode = () => {
   const contenedor = document.querySelector('#container-images');
   const createImg = createImageNode();
   contenedor.append(createImg);
+  registerImage(createImg); //"Registrar" la imagen creada en el lazy loading
 }
 
 // Agregar evento click al botón añadir para agregar el nodo de imagen
